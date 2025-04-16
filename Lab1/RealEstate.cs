@@ -19,37 +19,37 @@ namespace Lab1
         {
             if (area <= 0)
             {
-                throw new ArgumentException("Некорректная площадь.");
+                throw new ArgumentException("Incorrect area");
             }
             Area = area;
 
             if (rooms <= 0)
             {
-                throw new ArgumentException("Некорректное количество комнат.");
+                throw new ArgumentException("Incorrect rooms count");
             }
             Rooms = rooms;
 
             if (floor <= 0)
             {
-                throw new ArgumentException("Некорректный этаж.");
+                throw new ArgumentException("Incorrect floor");
             }
             Floor = floor;
 
             if (propertyType != "квартира" && propertyType != "дом" && propertyType != "студия")
             {
-                throw new ArgumentException("Некорректный тип недвижимости.");
+                throw new ArgumentException("Incorrect appartment type");
             }
             PropertyType = propertyType;
 
             if (condition != "новое" && condition != "хорошее" && condition != "требует ремонта")
             {
-                throw new ArgumentException("Некорректное состояние объекта.");
+                throw new ArgumentException("Incorrect object state");
             }
             Condition = condition;
 
             if (location != "центр" && location != "пригород" && location != "отдаленный район")
             {
-                throw new ArgumentException("Некорректное расположение.");
+                throw new ArgumentException("Incorrect location");
             }
             Location = location;
         }
@@ -61,7 +61,7 @@ namespace Lab1
                 "квартира" => Area * 30000,
                 "дом" => Area * 40000,
                 "студия" => Area * 25000,
-                _ => throw new ArgumentException("Некорректный тип недвижимости.")
+                _ => throw new ArgumentException("Incorrect apartment type")
             };
 
             if (Rooms > 3)

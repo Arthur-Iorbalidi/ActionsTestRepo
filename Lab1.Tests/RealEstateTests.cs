@@ -15,7 +15,7 @@ namespace Lab1.Tests
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректная площадь.", exception.Message);
+            Assert.Equal("Incorrect area", exception.Message);
         }
 
         [Theory]
@@ -31,7 +31,7 @@ namespace Lab1.Tests
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное количество комнат.", exception.Message);
+            Assert.Equal("Incorrect rooms count", exception.Message);
         }
 
         [Theory]
@@ -47,7 +47,7 @@ namespace Lab1.Tests
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректный этаж.", exception.Message);
+            Assert.Equal("Incorrect floor", exception.Message);
         }
 
         [Theory]
@@ -63,7 +63,7 @@ namespace Lab1.Tests
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректный тип недвижимости.", exception.Message);
+            Assert.Equal("Incorrect apartment type", exception.Message);
         }
 
         [Theory]
@@ -79,7 +79,7 @@ namespace Lab1.Tests
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное состояние объекта.", exception.Message);
+            Assert.Equal("Incorrect object state", exception.Message);
         }
 
         [Theory]
@@ -95,7 +95,7 @@ namespace Lab1.Tests
 
             var exception = Assert.Throws<ArgumentException>(() =>
                 new RealEstate(area, rooms, floor, propertyType, condition, location));
-            Assert.Equal("Некорректное расположение.", exception.Message);
+            Assert.Equal("Incorrect location", exception.Message);
         }
 
 
