@@ -37,7 +37,7 @@ namespace Lab1
 
             if (propertyType != "квартира" && propertyType != "дом" && propertyType != "студия")
             {
-                throw new ArgumentException("Incorrect appartment type");
+                throw new ArgumentException("Incorrect apartment type");
             }
             PropertyType = propertyType;
 
