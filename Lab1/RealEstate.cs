@@ -35,19 +35,19 @@ namespace Lab1
             }
             Floor = floor;
 
-            if (propertyType != "квартира" && propertyType != "дом" && propertyType != "студия")
+            if (propertyType != "flat" && propertyType != "house" && propertyType != "studio")
             {
                 throw new ArgumentException("Incorrect apartment type");
             }
             PropertyType = propertyType;
 
-            if (condition != "новое" && condition != "хорошее" && condition != "требует ремонта")
+            if (condition != "new" && condition != "good" && condition != "repair needed")
             {
                 throw new ArgumentException("Incorrect object state");
             }
             Condition = condition;
 
-            if (location != "центр" && location != "пригород" && location != "отдаленный район")
+            if (location != "centre" && location != "suburb" && location != "remote area")
             {
                 throw new ArgumentException("Incorrect location");
             }
@@ -58,9 +58,9 @@ namespace Lab1
         {
             decimal basePrice = PropertyType switch
             {
-                "квартира" => Area * 30000,
-                "дом" => Area * 40000,
-                "студия" => Area * 25000,
+                "flat" => Area * 30000,
+                "house" => Area * 40000,
+                "studio" => Area * 25000,
                 _ => throw new ArgumentException("Incorrect apartment type")
             };
 
@@ -74,12 +74,12 @@ namespace Lab1
             else if (Floor == 1)
                 basePrice *= 0.90m;
 
-            if (Condition == "требует ремонта")
+            if (Condition == "repair needed")
                 basePrice *= 0.80m;
-            else if (Condition == "новое")
+            else if (Condition == "new")
                 basePrice *= 1.10m;
 
-            if (Location == "центр")
+            if (Location == "centre")
                 basePrice *= 1.25m;
 
             return basePrice;
